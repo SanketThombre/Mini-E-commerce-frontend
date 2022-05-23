@@ -1,0 +1,96 @@
+
+  
+  
+  
+  
+  
+ 
+ 
+  
+  #vbox2 {
+    /* border: 1px solid blue; */
+    flex: 1;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  #vstar {
+    font-size: 10px;
+  }
+  
+  /* right Side Second Box */
+  
+  
+  
+  #vbox2 > h2 {
+    border-bottom: 1px solid #a5a5a5;
+    font-size: 18px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-family: Theory-web-ul;
+  }
+  
+  
+  
+  
+ 
+  /* payment Box */
+  
+  #vpaymentname {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+    border-bottom: 1px solid #a5a5a5;
+  }
+  
+  #vpaymentname > h2 {
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  #vpaymentname > h5 {
+    padding-top: 9px;
+  }
+ 
+  
+  #vbutton {
+    padding: 10px 60px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    margin-top: 30px;
+    margin-left: 18px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #vprice {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+    /* border-bottom: 1px solid black; */
+    font-size: 15px;
+  }
+
+  #vprice>h1{
+font-size: 20px;
+  }
+  
+ 
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+ 
+ 

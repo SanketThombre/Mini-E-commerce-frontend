@@ -1,0 +1,19 @@
+
+.img2{
+    display:none;
+    border-radius:8px;
+}
+.img1{
+    border-radius:8px; 
+}
+
+.prod_img:hover .img1{
+display:none
+}
+
+.prod_img:hover .img2 {
+    display:block;
+    }
+
+
+   
