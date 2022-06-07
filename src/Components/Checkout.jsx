@@ -47,7 +47,7 @@ const dispatch = useDispatch();
   console.log(id)
     const [item, setItem] = useState([]);
     useEffect(() => {
-        axios.get(`http://localhost:5000/users/${id}`).then((res) => {
+        axios.get(`https://miniecommerce-backend.herokuapp.com/users/${id}`).then((res) => {
             console.log(res.data, "cart")
             setItem(res.data.cart)
         })
@@ -67,7 +67,7 @@ const dispatch = useDispatch();
         
     
         let data = [];
-        axios.patch(`http://localhost:5000/users/${id}`,{ cart:data})
+        axios.patch(`https://miniecommerce-backend.herokuapp.com/users/${id}`,{ cart:data})
    
         dispatch(cartcount(0))
 

@@ -22,7 +22,7 @@ export const prodfailure = () => ({
 export const getData = () => (dispatch) => {
    
     dispatch(prodloading())
-    axios.get("http://localhost:5000/products")
+    axios.get("https://miniecommerce-backend.herokuapp.com/products")
         .then((res) => dispatch(prodsuccess(res.data)))
         .catch((err) => dispatch(prodfailure()));
 }

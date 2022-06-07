@@ -21,7 +21,7 @@ export const loginfailure = () => ({
 export const login = ({username, password}) => (dispatch) => {
     dispatch(loginloading());
 
-    axios.post("http://localhost:5000/login",{username, password})
+    axios.post("https://miniecommerce-backend.herokuapp.com/login",{username, password})
         .then((res) => {
             console.log(res);
             dispatch(loginsuccess({ username, token: res.data.token,id: res.data.user._id }));

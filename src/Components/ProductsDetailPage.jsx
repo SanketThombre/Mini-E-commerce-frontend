@@ -46,7 +46,7 @@ export const ProductsDetailPage = () => {
   const { username } = useSelector((state) => state.login);
    const dispatch = useDispatch(); 
   useEffect(() => {
-    axios.get(`http://localhost:5000/products/${id}`).then((res) => {
+    axios.get(`https://miniecommerce-backend.herokuapp.com/products/${id}`).then((res) => {
       console.log("data", res)
       setData([res.data]);
     })
@@ -55,7 +55,7 @@ export const ProductsDetailPage = () => {
   const handleCart = (prod) => {
    
     console.log(prod, "prod");
-    axios.get("http://localhost:5000/users")
+    axios.get("https://miniecommerce-backend.herokuapp.com/users")
         .then((res) => {
         
             let data = [];
@@ -73,7 +73,7 @@ export const ProductsDetailPage = () => {
             data.push(prod);
 
             if (userid) {
-                axios.patch(`http://localhost:5000/users/${userid}`, { cart: data })
+                axios.patch(`https://miniecommerce-backend.herokuapp.com/users/${userid}`, { cart: data })
                   .then((res) => {
                     dispatch(cartcount(res.data.cart.length))
                         alert("Added to Cart successfully")
