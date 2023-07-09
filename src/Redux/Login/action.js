@@ -21,7 +21,7 @@ export const loginfailure = () => ({
 export const login = ({username, password}) => (dispatch) => {
     dispatch(loginloading());
 
-    axios.post("https://miniecommerce-backend.herokuapp.com/login",{username, password})
+    axios.post("https://mini-e-commerce-backend-ml0o.onrender.com/login",{username, password})
         .then((res) => {
             console.log(res);
             dispatch(loginsuccess({ username, token: res.data.token,id: res.data.user._id }));
@@ -31,7 +31,7 @@ export const login = ({username, password}) => (dispatch) => {
            
         }).catch((res) => {
             alert(res.response.data.message);
-console.log(res,"err")
+            console.log(res,"err")
             dispatch(loginfailure());
     })
 }

@@ -12,7 +12,7 @@ export const Addcart = () => {
 const dispatch = useDispatch();
     const [item, setItem] = useState([]);
     useEffect(() => {
-        axios.get(`https://miniecommerce-backend.herokuapp.com/users/${id}`).then((res) => {
+        axios.get(`https://mini-e-commerce-backend-ml0o.onrender.com/users/${id}`).then((res) => {
             console.log(res.data, "cart")
             setItem(res.data.cart)
         })
@@ -28,7 +28,7 @@ const dispatch = useDispatch();
         }
     
         console.log(cart1, "cart1");
-        axios.patch(`https://miniecommerce-backend.herokuapp.com/users/${id}`, { cart: cart1 })
+        axios.patch(`https://mini-e-commerce-backend-ml0o.onrender.com/users/${id}`, { cart: cart1 })
             .then((res) => {
               
             // alert("Item removed from cart");

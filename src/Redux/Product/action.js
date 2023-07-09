@@ -22,7 +22,7 @@ export const prodfailure = () => ({
 export const getData = () => (dispatch) => {
    
     dispatch(prodloading())
-    axios.get("https://miniecommerce-backend.herokuapp.com/products")
+    axios.get("https://mini-e-commerce-backend-ml0o.onrender.com/products")
         .then((res) => dispatch(prodsuccess(res.data)))
         .catch((err) => dispatch(prodfailure()));
 }

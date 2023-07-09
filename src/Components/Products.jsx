@@ -52,7 +52,7 @@ export const Products = () => {
     
     const handleCart = (prod) => {
         // console.log(prod, "prod");
-        axios.get("https://miniecommerce-backend.herokuapp.com/users")
+        axios.get("https://mini-e-commerce-backend-ml0o.onrender.com/users")
             .then((res) => {
             console.log(res,"user")
                 let data = [];
@@ -70,7 +70,7 @@ export const Products = () => {
                 data.push(prod);
 
                 if (userid) {
-                    axios.patch(`https://miniecommerce-backend.herokuapp.com/users/${userid}`, { cart: data })
+                    axios.patch(`https://mini-e-commerce-backend-ml0o.onrender.com/users/${userid}`, { cart: data })
                         .then((res) => {
                             dispatch(cartcount(res.data.cart.length))
                             alert("Added to Cart successfully")
